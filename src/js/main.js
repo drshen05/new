@@ -1,5 +1,5 @@
-import "../css/main.css";
+import "../scss/main.scss";
 
-const foo = {
-  bar: 1,
-};
+// const foo = {
+//   bar: 1,
+// };
