@@ -1,4 +1,7 @@
 @import './mixins';
-header {
-    @include flex-column;
-}
+@import './base';
+@import './globals';
+
+// header {
+//     @include flex-column;
+// }
