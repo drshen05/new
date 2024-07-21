@@ -1,5 +1,7 @@
-import "../scss/main.scss";
+import '../assets/scss/main.scss';
+// import "./components/theme";
+import { useTheme } from './components/theme';
+import { useBurger } from './components/burger';
 
-// const foo = {
-//   bar: 1,
-// };
+useTheme();
+useBurger();
