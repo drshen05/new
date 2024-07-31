@@ -1,82 +1,130 @@
-.testimonials{
-    padding: 69px 0 160px;
+.testimonials {
+  padding: 69px 0 160px;
 
-    &__head{
+  @include mobile {
+    padding: 10px 0 100px;
+  }
 
-        @include flex-all-between;
-margin-bottom: 48px;
+  &__head {
+    @include flex-all-between;
+    margin-bottom: 48px;
+
+    @include tablet {
+      flex-direction: column;
+      text-align: center;
+      gap: 24px;
     }
+  }
 
-    &__title{
-        max-width: 530px;
+  &__title {
+    max-width: 530px;
+    font-weight: 600;
+    letter-spacing: -0.04em;
+    color: var(--neutral-color-100);
+  }
+  &__descr {
+    max-width: 376px;
+    font-weight: 500;
+    line-height: 178%;
+    color: var(--neutral-color-150);
+  }
+
+  &__rating {
+    @include flex-align-center;
+
+    gap: 8px;
+    margin-bottom: 19px;
+    &-num {
+      font-weight: 500;
+      line-height: 162%;
+      color: var(--neutral-color-100);
+    }
+  }
+  &__slider {
+    &-wrapper-svg {
+      @include tablet {
+        display: none;
+      }
+    }
+    // ::before{
+    //             content: '';
+    //             display: inline-block;
+    //             width: 115px;
+    //             height: 77px;
+    //             background: url(./icons/quotes.svg);
+    //         }
+    max-width: 898px;
+  }
+  &__comments {
+  }
+  &__comment {
+    &-text {
+      margin-bottom: 40px;
+      font-weight: 500;
+      line-height: 130%;
+      letter-spacing: -0.03em;
+      color: var(--neutral-color-100);
+    }
+    &-author {
+      @include flex-align-center;
+      gap: 24px;
+      font-style: normal;
+
+      &-avatar {
+        border-radius: 50%;
+        overflow: hidden;
+      }
+      &-name {
         font-weight: 600;
-letter-spacing: -0.04em;
-color: var(--neutral-color-100);
-    }
-    &__descr{
-        max-width: 376px;
+        line-height: 144%;
+        color: var(--neutral-color-100);
+      }
+
+      &-prof {
         font-weight: 500;
-line-height: 178%;
-color: var(--neutral-color-150);
+        line-height: 162%;
+        color: var(--neutral-color-150);
+      }
+    }
+  }
+  &__btns {
+    @include flex-align-center;
+    justify-content: flex-end;
+    gap: 16px;
+    transform: translateY(-40px);
+
+    @include small-desktop {
+      transform: translateY(-10px);
     }
 
-
-    &__rating{
-        @include flex-align-center;
-
-        gap: 8px;
-        margin-bottom: 19px;
-        &-num{
-
-            font-weight: 500;
-            line-height: 162%;
-            color: var(--neutral-color-100);
-        }
+    @include mobile {
+      transform: translateY(25px);
     }
-    &__slider{
-// ::before{
-//             content: '';
-//             display: inline-block;
-//             width: 115px;
-//             height: 77px;
-//             background: url(./icons/quotes.svg);
-//         }
-max-width: 898px;
+  }
+  &__btn {
+    @include flex-all-center;
+    border: 1px solid var(--neutral-color-40);
+    border-radius: 50%;
+    padding: 16px;
+    width: 50px;
+    height: 50px;
+    transition:
+      background-color var(--transition),
+      border-color var(--transition);
+
+    &:hover {
+      background-color: var(--neutral-color-100);
+      border-color: var(--neutral-color-100);
+      & svg path {
+        fill: #fff;
+      }
     }
-    &__comments{
 
-
-        
+    & svg path {
+      transition: fill var(--transition);
     }
-    &__comment{
-        
-        &-text{
-            margin-bottom: 40px;
-            font-weight: 500;
-line-height: 130%;
-letter-spacing: -0.03em;
-color: var(--neutral-color-100);
-        }
-        &-author{
-            @include flex-align-center;
-            gap: 24px;
-            font-style: normal;
-
-            &-avatar{
-                border-radius: 50%;
-                overflow: hidden;
-            }
-            &-name{
-                font-weight: 600;
-line-height: 144%;
-color: var(--neutral-color-100);
-            }
-
-            &-prof{
-                font-weight: 500;
-                line-height: 162%;
-                color: var(--neutral-color-150);
-            }
-        }
+    &--next {
+      transform: rotate(-180deg);
     }
+  }
 }

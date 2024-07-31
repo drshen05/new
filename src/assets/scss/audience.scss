@@ -1,0 +1,12 @@
+@import './mixins';
+@import './base';
+@import './globals';
+
+// components
+@import './components/header';
+
+@import './components/audience/hero.scss';
+@import './components/audience/gallery.scss';
+@import './components/audience/articles.scss';
+
+@import './components/footer';

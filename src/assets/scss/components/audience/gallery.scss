@@ -1,0 +1,109 @@
+.gallery{
+    background: #1d1e25;
+    padding-top: 120px;
+    @include mobile{
+        padding: 80px 0;
+    }
+    &__container{
+
+    }
+    &__list{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        // grid-template-rows: repeat(4, 1fr);
+        gap: 159px 32px;
+        // flex-wrap: wrap;
+        @include small-desktop{
+            grid-template-columns: repeat(2, 450px);
+            justify-content: center;
+        }
+        @include small-tablet{
+            grid-template-columns: repeat(2, 300px);
+            gap: 70px 22px;
+        }
+        @include mobile{
+            grid-template-columns: repeat(1, 350px);
+            
+        }
+        @include small-mobile{
+            grid-template-columns: repeat(1, 300px);
+            
+        }
+    }
+    &__item{
+        min-width: 584px;
+        &-title{
+            padding: 24px 0;
+            @include small-mobile{
+                padding: 12px 0;
+            }
+        }
+        @include small-desktop{
+            min-width: 450px;
+            // min-width: none;
+            // max-width: 584px;
+            // width: 350px;
+        }
+        @include small-tablet{
+min-width: 300px;
+        }
+        @include mobile{
+            min-width: 250px;
+        }
+
+        &--height{
+            transform: translateY(-245px);
+            @include small-tablet{
+                transform: translateY(-126px);
+            }
+            @include mobile{
+                transform: translateY(0);
+            }
+        }
+        // &--small{
+        //     grid-row-start: 1;
+        //     grid-row-end:2 ;
+        // }
+        &-img{
+            
+        }
+    }
+    &__link{
+        
+        font-weight: 600;
+line-height: 120%;
+color: #fff;
+@include small-desktop{
+    // width: 350px;
+font-size: 35px;
+}
+@include small-tablet{
+            font-size: 25px;
+}
+@include mobile{
+    // padding: 12px 0;
+    
+}
+@include small-mobile{
+    font-size: 20px;
+
+}
+    }
+    &__descr{
+        font-weight: 500;
+line-height: 178%;
+color: #7e8492;
+@include small-desktop{
+    font-size: 16px ;
+    
+
+}
+@include small-tablet{
+            font-size: 13px;
+}
+@include mobile{
+    padding-bottom: 10px;
+}
+
+    }
+}
