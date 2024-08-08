@@ -94,6 +94,7 @@
       margin-bottom: 24px;
       font-weight: 700;
       line-height: 150%;
+      color: #fff;
 
       @include mobile{
         min-width: 143px;
@@ -237,4 +238,19 @@
       color: #fff;
     }
   }
+}
+
+@media(max-width:380px){
+    .footer__list{
+        flex-direction: column
+    }
+    .tab__content{
+        display: none;
+    }
+    .tab__content--show{
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+
+    }
 }

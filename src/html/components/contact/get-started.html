@@ -35,8 +35,9 @@
             type="email" 
             class="start__form-input text-p-small"
             name="email"
-            required
+            
             placeholder="you@company.com">
+            <span class="form__error">Это поле должно содержать E-Mail в формате you@company.com</span>
         </label>
         <label class="start__form-label text-p-small">
             <span class="start__form-label-text text-p-small">Phone number</span>
@@ -45,8 +46,9 @@
             type="tel" 
             class="start__form-input text-p-small"
             name="phone"
-            required
+            pattern="[\+]\d{1}\d{3}\d{3}\d{2}\d{2}"
             placeholder="">
+            <span class="form__error">Это поле должно содержать телефон в формате +7 (123) 456-78-90</span>
         </label>
         <label class="start__form-label text-p-small">
             <span class="start__form-label-text text-p-small">Phone number</span>

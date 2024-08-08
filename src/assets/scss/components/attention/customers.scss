@@ -113,6 +113,11 @@ padding-bottom: 80px;
             display: flex;
             
         gap: 8px;
+        &-link-img{
+            // display: inline-block;
+            // filter: hue-rotate(180deg);
+            filter: brightness(0) invert(1);
+        }
         }
       }
       &-author {
