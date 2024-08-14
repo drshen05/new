@@ -1,5 +1,4 @@
-import '../assets/scss/main.scss';
-import '../assets/scss/swiper-bundle.min.css'
+import '../../src/assets/scss/main.scss';
 
 
 import { useTheme } from './components/theme';
